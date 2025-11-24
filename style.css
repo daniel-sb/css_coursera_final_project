@@ -1,0 +1,243 @@
+:root {
+  --ink: #1c1c28;
+  --mid: #2f3e54;
+  --accent: #ff7a5c;
+  --soft: #f6f7fb;
+  --bright: #f4d06f;
+  --muted: #93a3b8;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 20% 20%, #f9f1ff, #f3f6ff 45%, #eef4ff 100%);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1.25rem;
+  top: 4.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--bright);
+  color: #000;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: transform 200ms ease, box-shadow 200ms ease, opacity 200ms ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  z-index: 1000;
+  transform: translateY(-4px);
+  opacity: 1;
+  outline: 3px solid var(--ink);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(120deg, #0f1729, #1c2740);
+  color: #f9fbff;
+  box-shadow: 0 12px 30px rgba(15, 23, 41, 0.35);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+nav .brand {
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 0.6rem 0.85rem;
+  border-radius: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #f9fbff;
+  transition: background 220ms ease, color 220ms ease, transform 220ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: rgba(255, 122, 92, 0.14);
+  color: var(--bright);
+  transform: translateY(-2px);
+}
+
+nav a.active {
+  background: rgba(255, 122, 92, 0.26);
+  color: #fff;
+}
+
+main {
+  padding: 2rem clamp(1.5rem, 3vw, 3rem) 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  letter-spacing: 0.02em;
+}
+
+.intro {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.intro .card {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 1.6rem;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(17, 24, 39, 0.08);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.intro .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 60px rgba(17, 24, 39, 0.12);
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 122, 92, 0.12);
+  color: var(--mid);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.artboard {
+  width: 380px;
+  max-width: 100%;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tile {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(17, 24, 39, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.tile:hover {
+  transform: translateY(-8px) rotate(-0.5deg);
+  box-shadow: 0 24px 60px rgba(17, 24, 39, 0.12);
+}
+
+.tile:nth-child(odd) img {
+  border-radius: 26px;
+}
+
+.tile:nth-child(even) img {
+  border-radius: 12px 24px 12px 24px;
+}
+
+.tile h3 {
+  margin: 0.75rem 0 0.35rem;
+}
+
+.tile p {
+  margin: 0;
+  color: var(--mid);
+}
+
+.story-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.story {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 16px 36px rgba(17, 24, 39, 0.08);
+  transition: border-color 180ms ease, transform 180ms ease;
+  border: 1px solid transparent;
+}
+
+.story:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 3px solid #d9e2f5;
+  padding: 0.5rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #e6ecff, #fefefe);
+  box-shadow: 0 10px 26px rgba(17, 24, 39, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 36px rgba(17, 24, 39, 0.12);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  color: var(--mid);
+}
+
+@media (max-width: 640px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
