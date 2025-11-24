@@ -1,7 +1,7 @@
 :root {
   --ink: #1c1c28;
   --mid: #2f3e54;
-  --accent: #ff7a5c;
+  --accent: #d63b1c;
   --soft: #f6f7fb;
   --bright: #f4d06f;
   --muted: #93a3b8;
@@ -87,13 +87,13 @@ nav a {
 
 nav a:hover,
 nav a:focus-visible {
-  background: rgba(255, 122, 92, 0.14);
+  background: rgba(214, 59, 28, 0.14);
   color: var(--bright);
   transform: translateY(-2px);
 }
 
 nav a.active {
-  background: rgba(255, 122, 92, 0.26);
+  background: rgba(214, 59, 28, 0.26);
   color: #fff;
 }
 
@@ -141,7 +141,7 @@ h2 {
   gap: 0.4rem;
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
-  background: rgba(255, 122, 92, 0.12);
+  background: rgba(214, 59, 28, 0.12);
   color: var(--mid);
   font-weight: 700;
   font-size: 0.95rem;
